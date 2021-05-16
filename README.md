@@ -1,7 +1,4 @@
 401 class 01 lab
-
-
-
 # LAB - 01
 ## server-deployment-practice
 ### Author: Tamara Al-billeh
@@ -71,3 +68,4 @@
 (Created with [diagrams](https://app.diagrams.net/))
 
 ![UML Diagram](./assets/uml.png)
+
