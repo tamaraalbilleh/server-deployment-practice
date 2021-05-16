@@ -2,8 +2,8 @@
 // configs and dependencies //
 const express = require('express');
 const app = express ();
-require ('dotenv').config();
-const PORT = process.env.PORT || 5000;
+// require ('dotenv').config();                  // moved to index.js
+// const PORT = process.env.PORT || 5000;        // moved to index.js
 // require the error pages // 
 const error500Handler = require ('./error-handlers/500.js');
 const error404Handler = require ('./error-handlers/404.js');
@@ -42,7 +42,7 @@ function start (PORT) {
     console.log (`Listening on PORT : ${PORT}`);
   });
 }
-start (PORT);
+// start (PORT);    // moved to index.js
 
 // exporting functions from server.js  // 
 module.exports = {
