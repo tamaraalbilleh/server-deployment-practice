@@ -7,7 +7,7 @@ const request = supertest (server.app);
 // test test // 
 test ('dummy test',()=>{
   let sum = 20 +23 ;
-  expect (sum).toStrictEqual (43);
+  expect (sum).toEqual (43);
 });
 
 // tests // 
@@ -19,7 +19,7 @@ describe ('server', ()=>{
     const response = await request.get (rout);
     // assert
     expect(response.status).toBe (200);
-    expect(response.text).toEqual ('You are now on the Home Page , Hi ! 🥳 ');
+    expect(response.text).toBe ('You are now on the Home Page , Hi ! 🥳 ');
   });
 
   it ('Should get get Server is visible message', async ()=>{
@@ -29,7 +29,7 @@ describe ('server', ()=>{
     const response = await request.get (rout);
     // assert
     expect (response.status).toBe (200);
-    expect (response.text).toEqual('Server is visible ! 🤫');
+    expect (response.text).toBe('Server is visible ! 🤫');
   });
 
   it ('Should send 404 error page not found ', async ()=>{
@@ -47,6 +47,6 @@ describe ('server', ()=>{
     // act
     const response = await request.get (rout);
     // assert
-    expect (response.status).toBe(500);
+    expect (response.status).toEqual(500);
   });
 });
